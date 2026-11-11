@@ -2,7 +2,7 @@
 
 services:
   zookeeper:
-    image: bitnami/zookeeper:3.8
+    image: soldevelo/zookeeper:3.8
     container_name: zookeeper
     environment:
       ALLOW_ANONYMOUS_LOGIN: "yes"
@@ -11,7 +11,7 @@ services:
     restart: always
 
   kafka:
-    image: bitnami/kafka:3.5
+    image: soldevelo/kafka:3.5
     container_name: kafka
     environment:
       KAFKA_ZOOKEEPER_CONNECT: "zookeeper:2181"
